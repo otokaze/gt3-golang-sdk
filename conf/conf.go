@@ -1,7 +1,8 @@
 package conf
 
 import (
-	"github.com/BurntSushi/toml"
+	"encoding/json"
+	"io/ioutil"
 )
 
 // Conf info.
@@ -38,6 +39,10 @@ type Secret struct {
 
 // Init conf.
 func Init() (err error) {
-	_, err = toml.DecodeFile("config.toml", &Conf)
+	bs, err := ioutil.ReadFile("config.json")
+	if err != nil {
+		return
+	}
+	err = json.Unmarshal(bs, &Conf)
 	return
 }

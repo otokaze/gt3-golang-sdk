@@ -12,11 +12,15 @@ var (
 	servive *service.Service
 )
 
+// Init init route
 func Init(c *conf.Config, s *service.Service) {
-	config = c
-	servive = s
-	http.HandlerFunc("/geetest/preproccess", gtPreProcess)
-	http.HandleFunc("/geetest/revalidate", gtValidate)
+	config, servive = c, s
+	// init static file handler
+	fsh := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fsh))
+	http.HandleFunc("/x/gt/preprocess", gtPreProcess)
+	http.HandleFunc("/x/gt/validate", gtValidate)
+	// listen port 2233
 	if err := http.ListenAndServe(":2233", nil); err != nil {
 		panic(err)
 	}
