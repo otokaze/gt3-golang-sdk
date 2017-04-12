@@ -16,8 +16,3 @@
 #### 赞助
 Alipay:  
 <img src="./static/images/alipay.jpg" width="160">
-
-
-
-
-
