@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
-	"gt3-golang-sdk/conf"
-	"gt3-golang-sdk/http"
-	"gt3-golang-sdk/model/geetest"
+	"github.com/otokaze/gt3-golang-sdk/conf"
+	"github.com/otokaze/gt3-golang-sdk/http"
+	"github.com/otokaze/gt3-golang-sdk/model/geetest"
 )
 
 const (

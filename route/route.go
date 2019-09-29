@@ -3,8 +3,8 @@ package route
 import (
 	"net/http"
 
-	"gt3-golang-sdk/conf"
-	"gt3-golang-sdk/service"
+	"github.com/otokaze/gt3-golang-sdk/conf"
+	"github.com/otokaze/gt3-golang-sdk/service"
 )
 
 var (

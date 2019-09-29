@@ -3,11 +3,12 @@ package service
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"gt3-golang-sdk/conf"
-	"gt3-golang-sdk/dao/geetest"
-	mdl "gt3-golang-sdk/model/geetest"
 	"math/rand"
 	"strconv"
+
+	"github.com/otokaze/gt3-golang-sdk/conf"
+	"github.com/otokaze/gt3-golang-sdk/dao/geetest"
+	mdl "github.com/otokaze/gt3-golang-sdk/model/geetest"
 )
 
 // Service Geetest
